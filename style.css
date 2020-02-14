@@ -37,3 +37,14 @@ body {
     transition: .1s;
     /* transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); */
 }
+
+.digitalTime {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.384);
+    top: 70%;
+    left: 50%;
+    font-size: 60px;
+    transform: translate(-50%, -50%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: -1;
+}

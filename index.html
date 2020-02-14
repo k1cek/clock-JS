@@ -14,12 +14,14 @@
             <div class="hand handHour"></div>
             <div class="hand handMin"></div>
             <div class="hand handSec"></div>
+            <div class="digitalTime"></div>
         </div>
     </div>
     <script>
         const hourHand = document.querySelector('.handHour');
         const minHand = document.querySelector('.handMin');
         const secHand = document.querySelector('.handSec');
+        const time = document.querySelector('.digitalTime');
 
         function setDate() {
 
@@ -36,9 +38,12 @@
             minHand.style.transform = `rotate(${minsDegrees}deg)`;
 
             const hours = date.getHours();
+            hours < 10 ? "0" + date.getHours() : date.getHours();
             const hourDegrees = ((hours / 12) * 360) + ((minutes / 60) * 30);
             hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
+
+            time.textContent = `${hours}:${minutes}`;
         }
 
         setInterval(setDate, 100);
